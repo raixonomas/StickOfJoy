@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MQTT.Library.Server", "MQTT.Library.Server\MQTT.Library.Server.csproj", "{EA359464-0F4F-43DB-90AF-7DBEC0D00E48}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MQTT.Console.Server", "MQTT.Console.Server\MQTT.Console.Server.csproj", "{68B3396F-ED11-481E-BF98-781528CFC873}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MQTT.Library.Client", "MQTT.Library.Client\MQTT.Library.Client.csproj", "{C142A570-5579-428E-B804-D15E1E6E569A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MQTT.Console.Client", "MQTT.Console.Client\MQTT.Console.Client.csproj", "{B2D367C4-EE19-4DD9-A2C2-7DC1318E80ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA359464-0F4F-43DB-90AF-7DBEC0D00E48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA359464-0F4F-43DB-90AF-7DBEC0D00E48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA359464-0F4F-43DB-90AF-7DBEC0D00E48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA359464-0F4F-43DB-90AF-7DBEC0D00E48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68B3396F-ED11-481E-BF98-781528CFC873}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68B3396F-ED11-481E-BF98-781528CFC873}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68B3396F-ED11-481E-BF98-781528CFC873}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68B3396F-ED11-481E-BF98-781528CFC873}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C142A570-5579-428E-B804-D15E1E6E569A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C142A570-5579-428E-B804-D15E1E6E569A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C142A570-5579-428E-B804-D15E1E6E569A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C142A570-5579-428E-B804-D15E1E6E569A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2D367C4-EE19-4DD9-A2C2-7DC1318E80ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2D367C4-EE19-4DD9-A2C2-7DC1318E80ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2D367C4-EE19-4DD9-A2C2-7DC1318E80ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2D367C4-EE19-4DD9-A2C2-7DC1318E80ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A531BD5A-4282-41C6-BA97-D4809741B61B}
+	EndGlobalSection
+EndGlobal

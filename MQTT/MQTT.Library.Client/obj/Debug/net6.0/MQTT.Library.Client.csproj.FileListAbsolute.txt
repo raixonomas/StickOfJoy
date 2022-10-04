@@ -1,0 +1,12 @@
+C:\Users\533\Desktop\MQTT\MQTT.Library.Client\bin\Debug\net6.0\MQTT.Library.Client.deps.json
+C:\Users\533\Desktop\MQTT\MQTT.Library.Client\bin\Debug\net6.0\MQTT.Library.Client.dll
+C:\Users\533\Desktop\MQTT\MQTT.Library.Client\bin\Debug\net6.0\MQTT.Library.Client.pdb
+C:\Users\533\Desktop\MQTT\MQTT.Library.Client\obj\Debug\net6.0\MQTT.Library.Client.csproj.AssemblyReference.cache
+C:\Users\533\Desktop\MQTT\MQTT.Library.Client\obj\Debug\net6.0\MQTT.Library.Client.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\533\Desktop\MQTT\MQTT.Library.Client\obj\Debug\net6.0\MQTT.Library.Client.AssemblyInfoInputs.cache
+C:\Users\533\Desktop\MQTT\MQTT.Library.Client\obj\Debug\net6.0\MQTT.Library.Client.AssemblyInfo.cs
+C:\Users\533\Desktop\MQTT\MQTT.Library.Client\obj\Debug\net6.0\MQTT.Library.Client.csproj.CoreCompileInputs.cache
+C:\Users\533\Desktop\MQTT\MQTT.Library.Client\obj\Debug\net6.0\MQTT.Library.Client.dll
+C:\Users\533\Desktop\MQTT\MQTT.Library.Client\obj\Debug\net6.0\refint\MQTT.Library.Client.dll
+C:\Users\533\Desktop\MQTT\MQTT.Library.Client\obj\Debug\net6.0\MQTT.Library.Client.pdb
+C:\Users\533\Desktop\MQTT\MQTT.Library.Client\obj\Debug\net6.0\ref\MQTT.Library.Client.dll

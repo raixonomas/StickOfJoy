@@ -23,7 +23,6 @@
                 .CreateLogger();
 
             builder = new MqttServerOptionsBuilder()
-                .WithDefaultEndpoint()
                 .WithDefaultEndpointPort(707)
                 .WithConnectionValidator(OnNewConnection)
                 .WithApplicationMessageInterceptor(OnNewMessage);

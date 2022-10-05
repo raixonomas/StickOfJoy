@@ -6,4 +6,15 @@ Client client = new Client();
 
 client.Start();
 
-Console.ReadLine();
+string message;
+
+do
+{
+    Console.WriteLine("Enter the message you want to send");
+
+    message = Console.ReadLine();
+
+    client.SendJsonFile(message);
+
+} while (true);
+

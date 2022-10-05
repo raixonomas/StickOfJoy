@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "n/TomxeLd+bOOzD873IXqogWExWXgDXuRhdtm/11n7gkXNgjd7eLEUkHBM38GOVJrLzTKorkUAKcCb0qUPV9vw==",
+  "dgSpecHash": "CR8IVgcG+q1xuCm8XWHdB4WqJdt3OHlt+oYr4YvcDrJxJe4qtar4nV0SfFEfjnk57HHD+wwxSUH+f9tXJShijw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\533\\Desktop\\MQTT\\MQTT.Console.Client\\MQTT.Console.Client.csproj",
+  "projectFilePath": "C:\\Users\\533\\Documents\\GitHub\\StickOfJoy\\MQTT\\MQTT.Console.Client\\MQTT.Console.Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\533\\.nuget\\packages\\mqttnet\\3.0.16\\mqttnet.3.0.16.nupkg.sha512",
     "C:\\Users\\533\\.nuget\\packages\\mqttnet.extensions.managedclient\\3.0.16\\mqttnet.extensions.managedclient.3.0.16.nupkg.sha512",

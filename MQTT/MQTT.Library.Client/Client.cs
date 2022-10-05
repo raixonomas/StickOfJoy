@@ -33,7 +33,7 @@
 
             builder = new MqttClientOptionsBuilder()
                                         .WithClientId("Dev.To")
-                                        .WithTcpServer("10.4.1.228", 707);
+                                        .WithTcpServer("10.4.1.181", 707);
 
             options = new ManagedMqttClientOptionsBuilder()
                                     .WithAutoReconnectDelay(TimeSpan.FromSeconds(60))

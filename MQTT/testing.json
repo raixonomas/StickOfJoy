@@ -1,22 +1,26 @@
-{
-    company: {
-        name: "Treefish Inc",
-        info: {
-            employees: 3,
-        },
-        contacts: [
-            {
-                name: "Barbara",
-                phone: "873"
-            },
-            {
-                name: "Gerry",
-                phone: "734"
-            },
-            {
-                name: "Susan",
-                phone: "275"
-            }
-        ]
-    }
-}
+[
+	{
+		"Name":"Street Fighter",
+		Highscores:[
+			{
+				"Name":"Joe",
+				"Score":"123456"
+				"Position":"1",
+				"Date":"2022-10-05T14:50:32.000Z"
+			},
+			{
+				"Name":"Marge",
+				"Score":"45226"
+				"Position":"1",
+				"Date":"2022-10-05T14:50:32.000Z"
+			},
+			{
+				"Name":"Sam",
+				"Score":"7588"
+				"Position":"1",
+				"Date":"2022-10-05T14:50:32.000Z"
+			}
+		]
+	}
+	
+]

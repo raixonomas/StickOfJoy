@@ -23,6 +23,8 @@
 
         IManagedMqttClient _mqttClient;
 
+        private static string dir = @"C:\StickOfJoy";
+
         public Client()
         {
             Log.Logger = new LoggerConfiguration()
@@ -33,7 +35,7 @@
 
             builder = new MqttClientOptionsBuilder()
                                         .WithClientId("Dev.To")
-                                        .WithTcpServer("10.4.1.181", 707);
+                                        .WithTcpServer("10.4.1.184", 707);
 
             options = new ManagedMqttClientOptionsBuilder()
                                     .WithAutoReconnectDelay(TimeSpan.FromSeconds(60))
@@ -56,9 +58,20 @@
             await _mqttClient.SubscribeAsync(
                 new MqttTopicFilter
                 {
-                    Topic = "dev.to/topic/json"
+                    Topic = "dev.to/topic/highscore",
+
+                },
+                new MqttTopicFilter
+                {
+                    Topic = "dev.to/topic/data",
+
                 }
                 );
+
+            if (!Directory.Exists(dir))
+            {
+                Directory.CreateDirectory(dir);
+            }
         }
 
         public static void OnConnected(MqttClientConnectedEventArgs obj)
@@ -78,18 +91,34 @@
         
         public static void OnMessageReceived(MqttApplicationMessageReceivedEventArgs obj)
         {
-            var payloadText = Encoding.UTF8.GetString(
-             obj?.ApplicationMessage?.Payload ?? Array.Empty<byte>());
+            string topic = obj.ApplicationMessage.Topic;
+            var payloadText = obj.ApplicationMessage.Payload;
+            if (topic == "dev.to/topic/highscore")
+            {
+                using (FileStream writer = new FileStream(dir + @"\raiden2.hi", FileMode.Create, FileAccess.Write))
+                {
+                    writer.Write(obj.ApplicationMessage.Payload,0,obj.ApplicationMessage.Payload.Length);
+                }
+            }
+            else if (topic == "dev.to/topic/data")
+            {
+                using (StreamWriter writer = File.CreateText(dir + @"\hiscore.dat"))
+                {
+                    writer.Write(payloadText);
+                }
+            }
+
+            
 
             Console.WriteLine($"Received msg: {payloadText}");
         }
 
         public void SendJsonFile(string message)
         {
-            using (StreamReader r = new StreamReader(@"C:\Users\533\Documents\GitHub\StickOfJoy\MQTT\testing.json"))
+            using (StreamReader r = new StreamReader(@"C:\Users\533\Documents\GitHub\StickOfJoy\MQTT\raiden2.hi"))
             {
                 string json = r.ReadToEnd();
-                _mqttClient.PublishAsync("dev.to/topic/json", json);
+                _mqttClient.PublishAsync("dev.to/topic/highscore", json);
             }         
         }
     }

@@ -59,12 +59,12 @@
                 new MqttTopicFilter
                 {
                     Topic = "dev.to/topic/highscore",
-
+                    QualityOfServiceLevel = (MQTTnet.Protocol.MqttQualityOfServiceLevel)2,
                 },
                 new MqttTopicFilter
                 {
                     Topic = "dev.to/topic/data",
-
+                    QualityOfServiceLevel = (MQTTnet.Protocol.MqttQualityOfServiceLevel)2,                                  
                 }
                 );
 

@@ -4,6 +4,7 @@
     using System.Text;
     using MQTTnet;
     using MQTTnet.Server;
+    using MQTTnet.Adapter;
     using Serilog;
 
     public class Server
@@ -11,6 +12,8 @@
         MqttServerOptionsBuilder builder;
 
         IMqttServer mqttServer;
+
+        IMqttServerAdapter serverAdapter;
 
         static int MessageCounter;
 
@@ -23,9 +26,12 @@
                 .CreateLogger();
 
             builder = new MqttServerOptionsBuilder()
+                .WithDefaultEndpoint()
                 .WithDefaultEndpointPort(707)
                 .WithConnectionValidator(OnNewConnection)
                 .WithApplicationMessageInterceptor(OnNewMessage);
+
+            var list = new MqttFactory().DefaultServerAdapters.ToList();
 
             mqttServer = new MqttFactory().CreateMqttServer();
         }

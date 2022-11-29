@@ -1,0 +1,2 @@
+*/15 * * * * bash /home/pi/RetroPie/roms/arcade/fbneo/hi2txt/FetchHi.sh
+*/15 * * * * bash /home/pi/RetroPie/roms/arcade/fbneo/hi2txt/SendMqttHi.sh

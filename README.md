@@ -77,13 +77,21 @@ Supprimer le dossier node_modules/.cache
 Rebuilder l'application
 
 
-premièrement, vous allez voir quatres folder dans le projet : MQTT, highscore-web, hi2txt_doc et PiScript.
-    le dossier MQTT contient la solution qui est exécuté sur la machine virtuelle 10.4.1.44 : 707. cette machine est notre broker mqtt
-    le dossier highscore-web contien notre application react qui vas chercher les hi-scores de tout les jeux d'arcade et les affiche a l'écran
-    le dossier hi2txt_doc contient une application tierce qui sert a décrypter les fichier de high score dans le rasberry pi.
-    le dossier PiScript contient les deux scripts qui se font exétuter sur le rasberry pi ansci de la cron table qui exécute ces scripts.
+Premièrement, vous allez voir quatres dossier dans le projet : MQTT, highscore-web, hi2txt_doc et PiScript.
+    - Le dossier MQTT contient la solution qui est exécuté sur la machine virtuelle 10.4.1.44 : 707. cette machine est notre broker mqtt
+    - Le dossier highscore-web contien notre application react qui vas chercher les hi-scores de tout les jeux d'arcade et les affiche a l'écran
+    - Le dossier hi2txt_doc contient une application tierce qui sert a décrypter les fichier de high score dans le rasberry pi.
+    - Le dossier PiScript contient les deux scripts qui se font exétuter sur le rasberry pi ansci de la cron table qui exécute ces scripts.
 
-la cron table dans le rasberry pi est au chemin var/spool/cron/crontabs/root il contient deux lignes qui apellent des scripts a tout les 15 minutes
-le script FetchHi.sh va chercher les meilleur scores de tout les jeux d'arcade et les decrypte dans des fichiers txt lisible par un humain dans le folder home/pi/RetroPie/roms/arcae/fbneo/ReadableScore
-le script SendMqttHi.sh va chercher tout les scores decrypte et les envoi vers notre broker mqtt. 
-ces deux scripts se trouvent dans le folder home/pi/RetroPie/roms/arcae/fbneo/hi2txt/
+Pour l'installation de Java, il faudra utiliser les commandes "sudo apt update" et "sudo apt install default-jdk"
+
+Pour hi2txt, il faut télécharger une version compatible avec Java (https://greatstoneex.github.io/hi2txt-doc/). Ensuite, il faut avoir un disque ayant un dossier nommé "RetroPie" vide. On prend le disque et on le met dans le Pie. Cela aura pour effet de copier le contenu du Pie dans le disque. Par la suite, il faudra créer un dossier nommé "Hi2txt" à l'endroit home/pi/RetroPie/roms/arcae/fbneo/. Une fois créé, il faudra prendre ce que nous venons de télécharger pour le copier dans le dossier "Hi2txt".
+La prochaine fois que le Pie va redémarrer avec le disque de branché, hi2txt sera installé.
+
+
+
+La cron table dans le rasberry pi est au chemin var/spool/cron/crontabs/root. Il contient deux lignes qui apellent des scripts a tous les 15 minutes.
+Le script FetchHi.sh va chercher les meilleurs scores de tout les jeux d'arcade et les décryptés en fichier txt dans le dossier home/pi/RetroPie/roms/arcae/fbneo/ReadableScore 
+Faire attention, il faut créer le dossier "ReadableScore" pour que le cron tab s'effectue correctement.
+Le script SendMqttHi.sh va chercher tout les scores décryptés et les envois vers notre broker mqtt. 
+Ces deux scripts se trouvent dans le folder home/pi/RetroPie/roms/arcae/fbneo/hi2txt/

@@ -3,9 +3,9 @@ import './App.css';
 import { useEffect, useState } from 'react';
 
 function App() {
-
+ /*"altbeast", "ddonpach", "ffight", "frogger", , "goldenaxe", "mmancp2u", "pacman", "raiden2" */
   const timeout = 1000
-  const gameArray = ["altbeast", "ddonpach", "ffight", "frogger", "galaga", "goldenaxe", "mmancp2u", "pacman", "raiden2"]
+  const gameArray = ["galaga"]
   var gameNameAndHighscore = 
   {
     "AlteredBeast" : "",
@@ -26,12 +26,13 @@ function App() {
     };
   }, [])
 
-  function CallApi(gameName)
+  async function CallApi(gameName)
   {
-    /*const response = await fetch(`/MQTT/Game/${gamename}`, {
+    const response = await fetch(`https://10.4.1.202:7166/ControllerGame/${gameName}`, {
       method: 'GET',
       headers: {'Content-Type': 'application/json'}
-    })*/
+    }).then((body) => body.json())
+    .then((c) => console.log(c));
   }
 
   return (

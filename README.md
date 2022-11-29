@@ -75,3 +75,15 @@ Supprimer
 Supprimer le dossier node_modules/.cache
 
 Rebuilder l'application
+
+
+premièrement, vous allez voir quatres folder dans le projet : MQTT, highscore-web, hi2txt_doc et PiScript.
+    le dossier MQTT contient la solution qui est exécuté sur la machine virtuelle 10.4.1.44 : 707. cette machine est notre broker mqtt
+    le dossier highscore-web contien notre application react qui vas chercher les hi-scores de tout les jeux d'arcade et les affiche a l'écran
+    le dossier hi2txt_doc contient une application tierce qui sert a décrypter les fichier de high score dans le rasberry pi.
+    le dossier PiScript contient les deux scripts qui se font exétuter sur le rasberry pi ansci de la cron table qui exécute ces scripts.
+
+la cron table dans le rasberry pi est au chemin var/spool/cron/crontabs/root il contient deux lignes qui apellent des scripts a tout les 15 minutes
+le script FetchHi.sh va chercher les meilleur scores de tout les jeux d'arcade et les decrypte dans des fichiers txt lisible par un humain dans le folder home/pi/RetroPie/roms/arcae/fbneo/ReadableScore
+le script SendMqttHi.sh va chercher tout les scores decrypte et les envoi vers notre broker mqtt. 
+ces deux scripts se trouvent dans le folder home/pi/RetroPie/roms/arcae/fbneo/hi2txt/

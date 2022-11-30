@@ -1,0 +1,3 @@
+cd {à la place qui a le sln}
+docker build -t api -f .\Dockerfile .
+docker run -d -p 3000:80 --name api api

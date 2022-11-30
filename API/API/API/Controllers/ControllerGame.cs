@@ -19,55 +19,55 @@ namespace API.Controllers
         [HttpGet("galaga")]
         public IActionResult Getgalaga()
         {
-            return Ok("{\"content\":" + "\"" + client.galaga?.Replace("\n", " ") + "\"" + "}");
+            return Ok("{\"content\":" + "\"" + client.galaga?.Replace("\n", "@") + "\"" + "}");
         }
 
         [HttpGet("altbeast")]
         public IActionResult Getaltbeast()
         {
-            return Ok("{\"content\":" + "\"" + client.altbeast?.Replace("\n", " ") + "\"" + "}");
+            return Ok("{\"content\":" + "\"" + client.altbeast?.Replace("\n", "@") + "\"" + "}");
         }
 
         [HttpGet("ddonpach")]
         public IActionResult Getddonpach()
         {
-            return Ok("{\"content\":" + "\"" + client.ddonpach?.Replace("\n", " ") + "\"" + "}");
+            return Ok("{\"content\":" + "\"" + client.ddonpach?.Replace("\n", "@") + "\"" + "}");
         }
 
         [HttpGet("ffight")]
         public IActionResult Getffight()
         {
-            return Ok("{\"content\":" + "\"" + client.ffight?.Replace("\n", " ") + "\"" + "}");
+            return Ok("{\"content\":" + "\"" + client.ffight?.Replace("\n", "@") + "\"" + "}");
         }
 
         [HttpGet("frogger")]
         public IActionResult Getfrogger()
         {
-            return Ok("{\"content\":" + "\"" + client.frogger?.Replace("\n", " ") + "\"" + "}");
+            return Ok("{\"content\":" + "\"" + client.frogger?.Replace("\n", "@") + "\"" + "}");
         }
 
         [HttpGet("goldenaxe")]
         public IActionResult Getgoldenaxe()
         {
-            return Ok("{\"content\":" + "\"" + client.goldenaxe?.Replace("\n", " ") + "\"" + "}");
+            return Ok("{\"content\":" + "\"" + client.goldenaxe?.Replace("\n", "@") + "\"" + "}");
         }
 
         [HttpGet("mmancp2u")]
         public IActionResult Getmmancp2u()
         {
-            return Ok("{\"content\":" + "\"" + client.mmancp2u?.Replace("\n", " ") + "\"" + "}");
+            return Ok("{\"content\":" + "\"" + client.mmancp2u?.Replace("\n", "@") + "\"" + "}");
         }
 
         [HttpGet("pacman")]
         public IActionResult Getpacman()
         {
-            return Ok("{\"content\":" + "\"" + client.pacman?.Replace("\n", " ") + "\"" + "}");
+            return Ok("{\"content\":" + "\"" + client.pacman?.Replace("\n", "@") + "\"" + "}");
         }
 
         [HttpGet("raiden2")]
         public IActionResult Getraiden2()
         {
-            return Ok("{\"content\":" + "\"" + client.raiden2?.Replace("\n", " ") + "\"" + "}");
+            return Ok("{\"content\":" + "\"" + client.raiden2?.Replace("\n", "@") + "\"" + "}");
         }
     }
 }
